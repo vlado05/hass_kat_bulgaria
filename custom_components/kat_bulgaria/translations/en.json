@@ -1,91 +1,91 @@
 {
   "config": {
     "abort": {
-      "already_configured": "Device is already configured.",
-      "cannot_connect": "KAT's website is down, try again.",
-      "invalid_config": "Invalid config - EGN or identification number.",
-      "reconfigure_successful": "Reconfiguration successful.",
-      "unknown": "Unknown error, check the logs for more details."
+      "already_configured": "Човек с това ЕГН вече е конфигуриран.",
+      "cannot_connect": "Сайта на КАТ е паднал, опитайте отново след малко.",
+      "invalid_config": "Невалидно ЕГН или идентификационен номер.",
+      "reconfigure_successful": "Успешна реконфигурация.",
+      "unknown": "Неочаквана грешка."
     },
     "error": {
-      "cannot_connect": "KAT's website is down, try again.",
-      "invalid_config": "Invalid EGN or identification number.",
-      "invalid_config_car_plate_number": "Invalid car plate number. Use only English capital letters or numbers, no intervals.",
-      "unknown": "Unknown error, check the logs for more details."
+      "cannot_connect": "Неуспешно свързване",
+      "invalid_config": "Невалидно ЕГН или идентификационен номер.",
+      "invalid_config_car_plate_number": "Невалиден номер на автомобил. Използвайте само главни букви на латиница, без интервали.",
+      "unknown": "Неочаквана грешка."
     },
     "step": {
-      "business": {
-        "data": {
-          "business_bulstat": "BULSTAT",
-          "document_number": "Government ID number",
-          "egn": "Unified Civil Number (EGN)",
-          "person_name": "Person name"
-        },
-        "title": "Configuration - Business"
+      "user": {
+        "title": "Конфигурация",
+        "menu_options": {
+          "business": "Юридическо лице",
+          "individual": "Физическо лице"
+        }
       },
       "individual": {
+        "title": "Конфигурация - Физическо лице",
         "data": {
-          "document_number": "Identification Number",
-          "document_type": "Identification Type",
-          "egn": "Unified Civil Number (EGN)",
-          "person_name": "Person name"
-        },
-        "title": "Configuration - Individual"
+          "person_name": "Име",
+          "egn": "ЕГН",
+          "document_number": "Идентификационен номер",
+          "document_type": "Вид идентификация"
+        }
       },
       "reconfigure": {
         "data": {
-          "document_number": "Identification Number",
-          "document_type": "Identification Type"
+          "document_number": "Идентификационен номер",
+          "document_type": "Вид идентификация"
         },
-        "title": "Update identification information"
+        "title": "Обновяване на идентификация"
       },
-      "user": {
-        "menu_options": {
-          "business": "Business",
-          "individual": "Individual"
-        },
-        "title": "Configuration"
+      "business": {
+        "title": "Конфигурация - Юридическо лице",
+        "data": {
+          "person_name": "Име",
+          "egn": "ЕГН",
+          "document_number": "Номер на лична карта",
+          "business_bulstat": "БУЛСТАТ"
+        }
       }
     }
   },
   "entity": {
     "binary_sensor": {
       "has_non_served_tickets": {
-        "name": "Has Non-Served Tickets",
+        "name": "Невръчени Глоби?",
         "state": {
-          "off": "No",
-          "on": "Yes"
+          "on": "Да",
+          "off": "Не"
         }
       },
       "has_tickets": {
-        "name": "Has Tickets",
+        "name": "Налични глоби?",
         "state": {
-          "off": "No",
-          "on": "Yes"
+          "on": "Да",
+          "off": "Не"
         }
       }
     },
     "sensor": {
-      "non_served_ticket_count": {
-        "name": "Count Non-Served"
+      "total_ticket_count": {
+        "name": "Общ брой глоби"
       },
       "served_ticket_count": {
-        "name": "Count Served"
+        "name": "Брой връчени глоби"
+      },
+      "non_served_ticket_count": {
+        "name": "Брой невръчени глоби"
       },
       "total_ticket_amount_owed": {
-        "name": "Total EUR Owed"
-      },
-      "total_ticket_count": {
-        "name": "Count Total"
+        "name": "Обща дължима сума"
       }
     }
   },
   "selector": {
     "document_type": {
       "options": {
-        "car_plate_num": "Car Plate Number",
-        "driving_license": "Driving License",
-        "national_id": "National ID"
+        "national_id": "Лична карта",
+        "driving_license": "Шофьорска книжка",
+        "car_plate_num": "Номер на автомобил"
       }
     }
   }
